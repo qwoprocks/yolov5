@@ -321,9 +321,10 @@ def train(hyp):
                         'optimizer': None if final_epoch else optimizer.state_dict()}
 
             # Save last, best and delete
-            torch.save(ckpt, wdir + 'last' + str(epoch) + '.pt')
             if (best_fitness == fi) and not final_epoch:
                 torch.save(ckpt, wdir + 'best' + str(epoch) + '.pt')
+            else:
+                torch.save(ckpt, wdir + 'last' + str(epoch) + '.pt')
             del ckpt
 
         # end epoch ----------------------------------------------------------------------------------------------------
