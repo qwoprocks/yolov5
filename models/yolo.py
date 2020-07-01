@@ -1,6 +1,6 @@
 import argparse
 
-from models.experimental import *
+from .models.experimental import *
 
 
 class Detect(nn.Module):

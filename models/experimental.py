@@ -1,4 +1,4 @@
-from models.common import *
+from .models.common import *
 
 
 class Sum(nn.Module):
